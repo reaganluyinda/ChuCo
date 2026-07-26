@@ -1,4 +1,5 @@
 import { MessageCircle, Search, Users } from "lucide-react";
+import Link from "next/link";
 const Home = () => {
   const features = [
     {
@@ -89,6 +90,29 @@ const Home = () => {
         </div>
       </div>
       
+{/* connect section */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-[url('/connect.jpg')] bg-cover bg-center z-0" />
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60 z-0" />
+
+        {/* Foreground content */}
+        <div className="relative z-10 flex flex-col md:flex-row gap-6 justify-around py-16 items-center max-sm:text-center text-white">
+          <div className="gap-4">
+            <h1 className="text-[40px] font-semibold">Ready to connect?</h1>
+            <h1 className="text-[20px]">
+              Join thousands of people finding their
+              <br /> spiritual home through ChurchConnect
+            </h1>
+          </div>
+          <Link href="/find-church">
+            <button className="bg-cyan-950 text-xl px-8 py-4 rounded-md text-white cursor-pointer">
+              Start your Journey
+            </button>
+          </Link>
+        </div>
+      </div>
   </div>
 )
 }
