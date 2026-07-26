@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from 'react';
 import { AnimatePresence, motion } from "framer-motion";
 
-function Navigation() {
+const Navigation = () => {
     const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen((prev) => !prev);
