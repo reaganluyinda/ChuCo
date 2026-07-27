@@ -1,5 +1,8 @@
 "use client";
-import { Search } from 'lucide-react';
+import { Button, Chip } from '@heroui/react';
+import { MapPin, Search, Users } from 'lucide-react';
+import Link from 'next/link';
+import Image from "next/image";
 import React, { useState } from 'react'
 
 const FindChurch = () => {
@@ -67,6 +70,13 @@ const FindChurch = () => {
     },
   ];
 
+    const filteredChurches = churches.filter(
+    (church) =>
+      church.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      church.denomination.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      church.location.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className=" px-4 py-8 flex flex-col items-center justify-center">
         <div className="text-center mb-12">
@@ -89,6 +99,70 @@ const FindChurch = () => {
           className="pl-12 h-12 pr-8 text-normal rounded-full w-full bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
         />
       </div>
+
+      {/* Churches list */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {filteredChurches.map((church) => (
+          <div
+            id="card"
+            key={church.id}
+            className=" border-0 shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 rounded-md"
+          >
+            <Image
+              src={church.image}
+              alt={church.name}
+              width={500}
+              height={192}
+              className=" object-cover mb-4"
+            />
+
+            <div className="px-4">
+              <div id="Card header" className="pb-3">
+                <div className="flex justify-between items-start mb-2">
+                  <h1 className="text-xl text-cyan-950 leading-tight">
+                    {church.name}
+                  </h1>
+                  <Chip className="ml-2 shrink-0">
+                    {church.denomination}
+                  </Chip>
+                </div>
+                <div className="flex items-center text-gray-500 text-sm mb-2">
+                  <MapPin className="h-4 w-4 mr-1" />
+                  {church.location}
+                </div>
+                <div className="text-gray-600">{church.description}</div>
+              </div>
+              {/*  card content */}
+              <div className=" flex items-center justify-between text-sm text-gray-500 mb-4">
+                <div className="flex items-center">
+                  <Users className="h-4 w-4 mr-1" />
+                  {church.memberCount} members
+                </div>
+                <div className="text-blue-600 font-medium">
+                  {church.ambassadorCount} ambassadors
+                </div>
+              </div>
+              <button className="w-full bg-cyan-950 text-white py-2 rounded-md mb-5  hover:bg-cyan-700 cursor-pointer">
+                <Link href={""}>Meet Ambassadors</Link>
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+      {filteredChurches.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-lg text-gray-500">
+            No Churches found matching your search
+          </p>
+          <Button
+            onClick={() => setSearchTerm("")}
+            className="mt-4"
+            variant="ghost"
+          >
+            Clear Search
+          </Button>
+        </div>
+      )}
     </div>
   )
 }
