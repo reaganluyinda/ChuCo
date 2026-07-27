@@ -13,6 +13,7 @@ const Register = () => {
 
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log('button clicked');
    }
 
   return (
@@ -33,7 +34,7 @@ const Register = () => {
 
         {/* Form Inputs */}
         <div className="mb-4">
-          <label className=" text-base font-medium mb-1">
+          <label className=" text-base font-medium mb-1 text-cyan-950">
             Email<span className="text-red-500">*</span>
           </label>
           <input
@@ -47,7 +48,7 @@ const Register = () => {
           />
         </div>
         <div className="mb-4">
-          <label className=" text-base font-medium mb-1">
+          <label className=" text-base font-medium mb-1 text-cyan-950">
             First Name<span className="text-red-500">*</span>
           </label>
           <input
@@ -61,7 +62,7 @@ const Register = () => {
           />
         </div>
         <div className="mb-4">
-          <label className=" text-base font-medium mb-1">
+          <label className=" text-base font-medium mb-1 text-cyan-950">
             Last Name<span className="text-red-500">*</span>
           </label>
           <input
@@ -75,7 +76,7 @@ const Register = () => {
           />
         </div>
         <div className="mb-4">
-          <label className=" text-base font-medium mb-1">
+          <label className=" text-base font-medium mb-1 text-cyan-950">
             Password<span className="text-red-500">*</span>
           </label>
           <input
@@ -89,7 +90,7 @@ const Register = () => {
           />
         </div>
         <div className="mb-8">
-          <label className=" text-base font-medium mb-1">
+          <label className=" text-base font-medium mb-1 text-cyan-950">
             Confirm Password
             <span className="text-red-500">*</span>
           </label>
@@ -105,12 +106,12 @@ const Register = () => {
         </div>
         <button
           type="submit"
-          className="bg-cyan-950 text-white  hover:bg-cyan-700 w-full px-4 py-2 rounded-md"
+          className="bg-cyan-950 text-white  hover:bg-cyan-700 w-full px-4 py-2 rounded-md cursor-pointer"
         >
           Register
         </button>
-        <h2 className="text-base mt-6 text-center text-cyan-700 ">
-          <Link className="cursor-pointer" href="/signin">
+        <h2 className=" mt-6 text-center ">
+          <Link className="font-medium cursor-pointer text-cyan-700  hover:text-cyan-900" href="/signin">
             Already have an account?
           </Link>
         </h2>
