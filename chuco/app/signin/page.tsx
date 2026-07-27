@@ -9,7 +9,10 @@ const Signin =() => {
   const [password, setPassword] = useState<string>("");
 
     const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();}
+    e.preventDefault();
+    console.log('button clicked');
+    
+  }
   return (
     <div className="min-h-screen flex items-center justify-center">
       {/* Sign In Form */}
@@ -71,13 +74,13 @@ const Signin =() => {
 
         <button
           type="submit"
-          className="bg-cyan-950 text-white  hover:bg-cyan-700 w-full px-4 py-2 rounded-md"
+          className="bg-cyan-950 text-white  hover:bg-cyan-700 w-full px-4 py-2 rounded-md cursor-pointer"
         >
           Sign in
         </button>
         <h2 className="text-base mt-6 text-center text-gray-500">
           Not registered Yet? &nbsp;
-          <span className="font-medium text-cyan-700 ">
+          <span className="font-medium text-cyan-700 hover:text-cyan-950 cursor-pointer">
             <Link href="/register">Create an account</Link>
           </span>
         </h2>
