@@ -40,7 +40,7 @@ const Signin =() => {
         </div>
 
         <div className="mb-4">
-          <label className=" text-base font-medium mb-1">
+          <label className=" text-base font-medium mb-1 text-cyan-950">
             Email<span className="text-red-500">*</span>
           </label>
           <input
@@ -55,7 +55,7 @@ const Signin =() => {
         </div>
 
         <div className="mb-2">
-          <label className=" text-base font-medium mb-1">
+          <label className=" text-base font-medium mb-1 text-cyan-950">
             Password<span className="text-red-500">*</span>
           </label>
           <input
