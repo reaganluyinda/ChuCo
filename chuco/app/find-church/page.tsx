@@ -65,7 +65,16 @@ const FindChurch = () => {
   ];
 
   return (
-    <div className='text-blue-500 text-3xl text-center'>FindChurch</div>
+    <div>
+        <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-cyan-950 mb-4">
+          Find Your Church
+        </h1>
+        <p className="text-gray-600 text-lg mb-8">
+          Discover Welcoming Church Communities in your area
+        </p>
+      </div>
+    </div>
   )
 }
 
