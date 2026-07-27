@@ -1,6 +1,9 @@
-import React from 'react'
+"use client";
+import { Search } from 'lucide-react';
+import React, { useState } from 'react'
 
 const FindChurch = () => {
+    const [searchTerm, setSearchTerm] = useState("");
     const churches = [
     {
       id: 1,
@@ -65,7 +68,7 @@ const FindChurch = () => {
   ];
 
   return (
-    <div>
+    <div className=" px-4 py-8 flex flex-col items-center justify-center">
         <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-cyan-950 mb-4">
           Find Your Church
@@ -73,6 +76,18 @@ const FindChurch = () => {
         <p className="text-gray-600 text-lg mb-8">
           Discover Welcoming Church Communities in your area
         </p>
+      </div>
+
+      {/* Search field */}
+      <div className="  max-w-md w-full mx-auto relative py-8 px-4">
+        <Search className="absolute left-8 top-1/2 transform -translate-y-1/2 text-gray-400 h-6 w-6" />
+        <input
+          type="text"
+          placeholder="Search by name, denomination or location..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="pl-12 h-12 pr-8 text-normal rounded-full w-full bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+        />
       </div>
     </div>
   )
