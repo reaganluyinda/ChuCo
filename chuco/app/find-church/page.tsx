@@ -11,7 +11,7 @@ const FindChurch = () => {
     {
       id: 1,
       name: "Myyrmaki Church",
-      denomination: "Born Again",
+      denomination: "Pentecostal",
       location: "Vantaa",
       address: "Plot 6 Kyambogo Drive Ntinda",
       memberCount: "1000+",
@@ -23,7 +23,7 @@ const FindChurch = () => {
     {
       id: 2,
       name: "Uspensky Cathedral",
-      denomination: "Pentecostal",
+      denomination: "Orthodox",
       location: "Helsinki",
       address: "Bukasa Road",
       memberCount: "100-200",
@@ -59,7 +59,7 @@ const FindChurch = () => {
     {
       id: 5,
       name: "Kamppi Cathedral",
-      denomination: "Born Again",
+      denomination: "Evangelical",
       location: "Kamppi",
       address: "Makerere, Kikoni",
       memberCount: "200-500",
