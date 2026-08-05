@@ -27,12 +27,12 @@ const Navigation = () => {
                 <div>
                     <Link href='/signin' className={`hover:text-blue-400 transition-colors flex items-center gap-2 cursor-pointer ${
                   pathname === "/signin" ? "text-blue-800" : "text-cyan-950"
-                }`}>Signin</Link>
+                }`}>Sign In</Link>
                 </div>
             </div>
                {/* Mobile menu button */}
         <button
-          className="sm:hidden text-cyan-950"
+          className="sm:hidden text-cyan-950 cursor-pointer"
           onClick={toggleMenu}
           aria-label="Menu"
         >

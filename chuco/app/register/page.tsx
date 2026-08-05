@@ -110,9 +110,10 @@ const Register = () => {
         >
           Register
         </button>
-        <h2 className=" mt-6 text-center ">
-          <Link className="font-medium cursor-pointer text-cyan-700  hover:text-cyan-900" href="/signin">
-            Already have an account?
+        <h2 className=" mt-6 text-cyan-950 ">
+            Already have an account? &nbsp;
+          <Link className="font-semibold cursor-pointer text-cyan-700  hover:text-cyan-900" href="/signin">
+            Sign in
           </Link>
         </h2>
       </form>
