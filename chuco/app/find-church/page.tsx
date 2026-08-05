@@ -10,9 +10,9 @@ const FindChurch = () => {
     const churches = [
     {
       id: 1,
-      name: "Phaneroo Ministries",
+      name: "Myyrmaki Church",
       denomination: "Born Again",
-      location: "Ntinda",
+      location: "Vantaa",
       address: "Plot 6 Kyambogo Drive Ntinda",
       memberCount: "1000+",
       description:
@@ -22,51 +22,51 @@ const FindChurch = () => {
     },
     {
       id: 2,
-      name: "New Life Fellowship",
+      name: "Uspensky Cathedral",
       denomination: "Pentecostal",
-      location: "Bukasa",
+      location: "Helsinki",
       address: "Bukasa Road",
       memberCount: "100-200",
       description:
         "Dynamic worship and a heart for spiritual growth and community",
       ambassadorCount: 3,
-      image: "/church1.jpg",
+      image: "/church2.jpg",
     },
     {
       id: 3,
-      name: "Namirembe Cathedral",
+      name: "Helsinki Cathedral",
       denomination: "Anglican",
-      location: "Namirembe",
+      location: "Helsinki",
       address: "Cathedral Hill Road",
       memberCount: "500-1000",
       description:
         "A welcoming community focused on grace, love and service to others",
       ambassadorCount: 6,
-      image: "/church1.jpg",
+      image: "/church3.png",
     },
     {
       id: 4,
-      name: "Rubaga Cathedral",
+      name: "Temppeliaukio Church",
       denomination: "Catholic",
-      location: "Kampala",
+      location: "Tampere",
       address: "Rubaga Road",
       memberCount: "1000+",
       description:
         "Historic Catholic parish serving the community for over 100 years",
       ambassadorCount: 8,
-      image: "/church1.jpg",
+      image: "/church4.jpg",
     },
     {
       id: 5,
-      name: "Canan Land",
+      name: "Kamppi Cathedral",
       denomination: "Born Again",
-      location: "Makerere",
+      location: "Kamppi",
       address: "Makerere, Kikoni",
       memberCount: "200-500",
       description:
         "Engage in deliverance and spiritual warfare against demonic agents",
       ambassadorCount: 4,
-      image: "/church1.jpg",
+      image: "/church5.jpg",
     },
   ];
 
@@ -108,13 +108,15 @@ const FindChurch = () => {
             key={church.id}
             className=" border-0 shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 rounded-md"
           >
-            <Image
-              src={church.image}
-              alt={church.name}
-              width={500}
-              height={192}
-              className=" object-cover mb-4"
-            />
+            
+                <Image
+                  src={church.image}
+                  alt={church.name}
+                  width={500}
+                  height={192}
+                  className=" object-cover mb-4 h-64 w-full"
+                />
+           
 
             <div className="px-4">
               <div id="Card header" className="pb-3">
