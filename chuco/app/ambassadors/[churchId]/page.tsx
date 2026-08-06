@@ -1,3 +1,7 @@
+"use client";
+import { Avatar, AvatarFallback, Button, Chip } from '@heroui/react';
+import { Clock, MessageCircle, Star } from 'lucide-react';
+import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import React from 'react'
 
@@ -161,10 +165,108 @@ const Ambassadors = () => {
       },
     ],
   };
-  
+
+   const church = churches.find((c) => c.id === id);
+
+  const churchAmbassadors = ambassadors[id] || [];
+
+  if (!church) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Church Not Found</h2>
+          <Button>
+            <Link href="/find-church">Back to Churches</Link>
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
+
   return (
-    <div className='text-blue-500 text-3xl text-center'>Ambassadors</div>
-  )
+   <div className="mx-auto px-4 py-8">
+      {/* Church Info */}
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-cyan-950 mb-2">{church.name}</h2>
+        <p className="text-gray-600 text-lg mb-6">{church.location}</p>
+        <p className="text-gray-700 max-w-2xl mx-auto">
+          Connect with our friendly ambassadors who are here to welcome you,
+          answer your questions, and help you feel at home in our community.
+        </p>
+      </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {churchAmbassadors.map((ambassador) => (
+          <div
+            key={ambassador.id}
+            className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg px-4 pb-4"
+          >
+            <div className="text-center pb-4">
+              <div className="relative inline-block">
+                <Avatar size="lg" className="mx-auto h-16 w-16 rounded-full">
+                  <Avatar.Image src="/user1.jpg" alt={ambassador.name} />
+                  <AvatarFallback>{ambassador.name.charAt(0)}</AvatarFallback>
+                </Avatar>
+                {ambassador.isOnline && (
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 border-2 border-white rounded-full"></div>
+                )}
+              </div>
+              <h1 className="text-xl text-cyan-950">{ambassador.name}</h1>
+              <p className="text-blue-600 font-medium">{ambassador.role}</p>
+            </div>
+            <div className="flex items-center justify-center space-x-1 mt-2">
+              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              <span className="text-sm font-medium">{ambassador.rating}</span>
+              <span className="text-gray-500 text-sm">
+                {ambassador.experience}
+              </span>
+            </div>
+            <div className="space-y-4">
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {ambassador.bio}
+              </p>
+              <div id="speciality">
+                <p className="text-sm font-medium text-gray-700 mb-2">
+                  Specializes in:
+                </p>
+                <div className="flex flex-wrap gap-1">
+                  {ambassador.specialties.map((specialty, index) => (
+                    <Chip key={index} className="text-xs bg-cyan-100 ">
+                      {specialty}
+                    </Chip>
+                  ))}
+                </div>
+              </div>
+              <div className="flex items-center text-xs text-gray-500 mb-2">
+                <Clock className="h-3 w-3 mr-1" />
+                {ambassador.responseTime}
+              </div>
+            </div>
+
+            <button className="w-full bg-cyan-950 text-white py-2 rounded-md mb-5  hover:bg-cyan-700 cursor-pointer">
+              <Link
+                href={`/chat/${ambassador.id}`}
+                className="flex flex-row items-center justify-center"
+              >
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Start Conversation
+              </Link>
+            </button>
+          </div>
+        ))}
+      </div>
+      {churchAmbassadors.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-gray-500 text-lg mb-4">
+            No ambassadors available for this church yet.
+          </p>
+          <Button variant="ghost">
+            <Link href="/find-church">Browse Other Churches</Link>
+          </Button>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Ambassadors

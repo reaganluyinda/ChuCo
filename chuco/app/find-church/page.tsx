@@ -145,7 +145,7 @@ const FindChurch = () => {
                 </div>
               </div>
               <button className="w-full bg-cyan-950 text-white py-2 rounded-md mb-5  hover:bg-cyan-700 cursor-pointer">
-                <Link href={""}>Meet Ambassadors</Link>
+                <Link href={`/ambassadors/${church.id}`}>Meet Ambassadors</Link>
               </button>
             </div>
           </div>
