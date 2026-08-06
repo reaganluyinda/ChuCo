@@ -22,11 +22,11 @@ const Ambassadors = () => {
 
   // mock church data
   const churches = [
-    { id: 1, name: "Phaneroo Ministries", location: "Ntinda" },
-    { id: 2, name: "New Life Fellowship", location: "Bukasa" },
-    { id: 3, name: "Namirembe Cathedral", location: "Namirembe" },
-    { id: 4, name: "Rubaga Cathedral", location: "Kampala" },
-    { id: 5, name: "Canan Land", location: "Makerere" },
+    { id: 1, name: "Myyrmaki Church", location: "Vantaa" },
+    { id: 2, name: "Uspensky Cathedral", location: "Helsinki" },
+    { id: 3, name: "Helsinki Cathedral", location: "Helsinki" },
+    { id: 4, name: "Temppeliaukio Church", location: "Tampere" },
+    { id: 5, name: "Kamppi Cathedral", location: "Kamppi" },
   ];
 
   //   Mock data for ambassadors
