@@ -34,7 +34,7 @@ const Ambassadors = () => {
     1: [
       {
         id: 1,
-        name: "Sarah Johnson",
+        name: "Aada Korhonen",
         role: "Welcome Team Leader",
         experience: "5 years",
         specialties: ["New Members", "Families", "Community Events"],
@@ -45,7 +45,7 @@ const Ambassadors = () => {
       },
       {
         id: 2,
-        name: "Michael Ochen",
+        name: "Leo Johannes",
         role: "Youth Pastor",
         experience: "3 years",
         specialties: ["Young Adults", "Students", "Bible Study"],
@@ -67,7 +67,7 @@ const Ambassadors = () => {
       },
       {
         id: 4,
-        name: "David Thompson",
+        name: "Aarne Thompson",
         role: "Pastoral Care",
         experience: "10 years",
         specialties: ["Counseling", "Prayer", "Life Transitions"],
@@ -93,7 +93,7 @@ const Ambassadors = () => {
     3: [
       {
         id: 6,
-        name: "Brian Kasumba",
+        name: "Jaakko Nieminen",
         role: "Discipleship Leader",
         experience: "4 years",
         specialties: ["Bible Study", "New Believers", "Mentorship"],
@@ -104,7 +104,7 @@ const Ambassadors = () => {
       },
       {
         id: 7,
-        name: "Grace Namutebi",
+        name: "Katariina Aurora",
         role: "Women's Ministry Coordinator",
         experience: "8 years",
         specialties: ["Women's Affairs", "Prayer Groups", "Community Outreach"],
@@ -115,7 +115,7 @@ const Ambassadors = () => {
       },
       {
         id: 8,
-        name: "Samuel Mbabazi",
+        name: "Leevi Joonatan",
         role: "Media & Tech Support",
         experience: "5 years",
         specialties: ["Media", "Live Streaming", "Technical Assistance"],
@@ -128,7 +128,7 @@ const Ambassadors = () => {
     4: [
       {
         id: 9,
-        name: "Doreen Akello",
+        name: "Vilma Inkeri",
         role: "Children's Ministry Coordinator",
         experience: "6 years",
         specialties: ["Kids Ministry", "Sunday School", "Parent Engagement"],
@@ -139,7 +139,7 @@ const Ambassadors = () => {
       },
       {
         id: 10,
-        name: "Jacob Tumusiime",
+        name: "Lauri Samuel",
         role: "Men's Fellowship Leader",
         experience: "7 years",
         specialties: ["Men's Ministry", "Accountability Groups", "Counseling"],
@@ -150,7 +150,7 @@ const Ambassadors = () => {
       },
       {
         id: 11,
-        name: "Anita Kaggwa",
+        name: "Emilia Kallio",
         role: "Music & Worship Leader",
         experience: "5 years",
         specialties: [
